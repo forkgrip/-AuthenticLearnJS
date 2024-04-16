@@ -27,40 +27,33 @@
     </main>
     <footer>
         <div class="container">
-            <p>JavaScript Samples</p>
+            <p id="showYourNum">JavaScript Samples</p>
 
         </div><!-- /.container -->
     </footer>
     <script src="script.js"></script>
     <script>
         "use strict";
-        //console.log("use strict")
-        //window.alert("What's 9 + 10?")//アラートするだけ
-        //window.confirm("コンフィルム");//Yes/Noの表示をする、true,falseを返す
-        if (window.confirm("時刻表示")) {
-            let ShowTime = window.prompt("ほんとに表示しますか？/nYes/No")
-            if (ShowTime === "Yes") {
-                document.getElementById('chise').textContent = new Date();
+        //fizzbuzz
+        
+        let userinput = parseInt(window.prompt("Enter a number for FizzBuzz:"));
+        function fizzbuzz(num){
+            if(num % 3 === 0 || num % 5 === 0){
+                return "FizzBuzz!"
             }
-            else {
-            document.getElementById('chise').textContent = "NoDate";
+            else if(num % 5 === 0){
+                return "Buzz"
+            }
+            else if(num % 3 === 0){
+                return "Fizz"
+            }
+            else{
+                return "どっちにも該当せぬ"
             }
         }
+        console.log(fizzbuzz(userinput));
 
-        //promptは、ユーザー入力を受け取れる
-
-        //documentってやつで、日時などの情報を取得
-        //console.log(document.getElementById('chise'))//要素の取得
-
-        let coss = "delete";
-        Console.log(ocument.getElementById('showtxt'))//.textContent = coss;
-        //.textContent == 要素を書き換える
-
-        //letとconstの違い
-        //letは後から再定義可能
-        //constは、後から定義不可(定数)
 
     </script>
 </body>
-
 </html>
